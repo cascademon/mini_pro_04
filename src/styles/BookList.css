@@ -1,0 +1,281 @@
+.book-list {
+  width: 100%;
+}
+
+.book-list .empty-message {
+  text-align: center;
+  color: #777;
+  padding: 56px 24px;
+  font-size: 16px;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(234, 223, 206, 0.8);
+  box-shadow: 0 14px 35px rgba(75, 60, 40, 0.1);
+}
+
+.book-list .books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-list .book-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+  border-radius: 24px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+  box-shadow: 0 14px 35px rgba(75, 60, 40, 0.1);
+}
+
+.book-list .book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 45px rgba(75, 60, 40, 0.16);
+  border-color: #2f7d6d;
+}
+
+.book-list .book-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.book-list .book-link:hover {
+  background: #ffffff;
+}
+
+.book-list .book-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  background: #f3ecdf;
+}
+
+.book-list .book-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 210px;
+}
+
+.book-list .book-info h3 {
+  font-size: 21px;
+  color: #263238;
+  margin: 0 0 8px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.book-list .book-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.book-list .book-info .author {
+  font-size: 14px;
+  color: #2f7d6d;
+  font-weight: 800;
+  margin: 0;
+}
+
+.book-list .genre-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef5f2;
+  border: 1px solid #a8d9c9;
+  color: #1f5f53;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.book-list .book-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  width: fit-content;
+  border-radius: 999px;
+  background: #fff8e5;
+  border: 1px solid #e8c980;
+  color: #a36a10;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.book-list .book-rating-summary span {
+  color: #a36a10;
+}
+
+.book-list .book-rating-summary small {
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.book-list .book-info .description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-list .book-info .date {
+  margin-top: auto;
+  font-size: 12px;
+  color: #999;
+}
+
+.book-list .book-actions {
+  display: flex;
+  gap: 10px;
+  padding: 16px 18px 18px;
+  border-top: 1px solid #eadfce;
+  background: #fbfaf7;
+}
+
+.book-list .like-btn,
+.book-list .favorite-btn,
+.book-list .delete-btn {
+  flex: 1;
+  padding: 11px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  font-weight: 900;
+}
+
+.book-list .like-btn {
+  border: 1px solid #e8c980;
+  background: #fff8e5;
+  color: #a36a10;
+}
+
+.book-list .like-btn:hover {
+  transform: translateY(-2px);
+  background: #f6e6b8;
+  border-color: #d9a441;
+}
+
+.book-list .favorite-btn {
+  border: 1px solid #d9a441;
+  background: #fff8e5;
+  color: #a36a10;
+}
+
+.book-list .favorite-btn:hover {
+  transform: translateY(-2px);
+  background: #f6e6b8;
+  border-color: #bf7f25;
+}
+
+.book-list .favorite-btn.active {
+  background: linear-gradient(135deg, #d9a441, #bf7f25);
+  color: white;
+  border-color: #bf7f25;
+}
+
+.book-list .delete-btn {
+  border: 1px solid #f2c4c4;
+  background: #fff1f1;
+  color: #c24141;
+}
+
+.book-list .delete-btn:hover {
+  transform: translateY(-2px);
+  background: #ffe1e1;
+  border-color: #dc2626;
+}
+
+/* 다크모드 보정 */
+
+body.dark .book-list .book-link:hover {
+  background: #242424;
+}
+
+body.dark .book-list .book-info h3 {
+  color: #ffffff !important;
+}
+
+body.dark .book-list .book-info .author {
+  color: #d7f3e8 !important;
+}
+
+body.dark .book-list .book-info .description {
+  color: #cfcfcf !important;
+}
+
+body.dark .book-list .book-info .date {
+  color: #bdbdbd !important;
+}
+
+body.dark .book-list .genre-badge {
+  background: #2f2f2f !important;
+  color: #e8e8e8 !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark .book-list .book-rating-summary {
+  background: #2f2f2f !important;
+  border: 1px solid #555 !important;
+  color: #f3f3f3 !important;
+}
+
+body.dark .book-list .book-rating-summary span,
+body.dark .book-list .book-rating-summary small {
+  color: #f3f3f3 !important;
+}
+
+/* 반응형 */
+
+@media (max-width: 1024px) {
+  .book-list .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .book-list .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-list .book-info {
+    min-height: auto;
+  }
+
+  .book-list .book-info h3 {
+    font-size: 18px;
+  }
+
+  .book-list .book-info .author,
+  .book-list .book-info .description {
+    font-size: 13px;
+  }
+
+  .book-list .book-actions {
+    flex-direction: column;
+  }
+}

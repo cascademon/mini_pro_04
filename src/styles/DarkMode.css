@@ -1,0 +1,723 @@
+/* =========================
+   다크모드 기본
+========================= */
+
+body.dark {
+  background: #151515;
+  color: #f3f3f3;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #2a2a2a;
+  color: white;
+  border-color: #444;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #9a9a9a;
+}
+
+/* =========================
+   공통 섹션
+========================= */
+
+body.dark .page-header,
+body.dark .welcome-section,
+body.dark .list-control-panel,
+body.dark .detail-container,
+body.dark .form-container,
+body.dark .stats-section,
+body.dark .recent-section,
+body.dark .popular-section,
+body.dark .favorite-section,
+body.dark .empty-trash,
+body.dark .trash-card,
+body.dark .review-section,
+body.dark .review-item,
+body.dark .form-section,
+body.dark .ai-box {
+  background: #1f1f1f;
+  color: #f3f3f3;
+  border-color: #333;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   텍스트
+========================= */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark label,
+body.dark span {
+  color: #f3f3f3;
+}
+
+body.dark .description,
+body.dark .book-details p,
+body.dark .section-title-row p,
+body.dark .page-header p,
+body.dark .welcome-section p,
+body.dark .book-author,
+body.dark .book-meta {
+  color: #cfcfcf;
+}
+
+/* =========================
+   결과 / 빈 상태 박스
+========================= */
+
+body.dark .result-summary,
+body.dark .dates p,
+body.dark .empty-message,
+body.dark .empty-review {
+  background: #252525;
+  color: #dddddd;
+  border-color: #333;
+}
+
+/* =========================
+   태그 / 필터
+========================= */
+
+body.dark .genre-tag,
+body.dark .sort-order-toggle {
+  background: #2a2a2a;
+  color: #dddddd;
+  border-color: #444;
+}
+
+body.dark .genre-tag:hover,
+body.dark .sort-order-toggle:hover {
+  background: #333333;
+  border-color: #5f9f88;
+}
+
+body.dark .genre-tag.active {
+  background: #5f9f88;
+  color: white;
+  border-color: #5f9f88;
+}
+
+body.dark .genre-badge {
+  background: #2f2f2f !important;
+  color: #e8e8e8 !important;
+  border: 1px solid #444 !important;
+}
+
+/* =========================
+   홈 카드 / 통계 카드
+========================= */
+
+body.dark .action-card {
+  background: #242424 !important;
+  border: 1px solid #3a3a3a;
+  color: #f3f3f3 !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+}
+
+body.dark .action-card:hover {
+  transform: translateY(-4px);
+  background: #2d2d2d !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .action-card h3 {
+  color: #f5f5f5 !important;
+}
+
+body.dark .action-card p {
+  color: #bdbdbd !important;
+}
+
+body.dark .action-card .icon {
+  opacity: 0.9;
+}
+
+body.dark .stat-item {
+  background: #242424 !important;
+  border: 1px solid #3a3a3a;
+  color: #f3f3f3 !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+}
+
+body.dark .stat-item:hover {
+  transform: translateY(-3px);
+  background: #2d2d2d !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .stat-number {
+  color: #ffffff !important;
+}
+
+body.dark .stat-label {
+  color: #bdbdbd !important;
+}
+
+/* =========================
+   도서 카드
+========================= */
+
+body.dark .popular-book-card {
+  background: #242424;
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .popular-book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .book-card {
+  background: #242424;
+  border: 1px solid #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .book-link:hover {
+  background: #242424 !important;
+}
+
+body.dark .book-info {
+  background: #242424;
+  color: #f3f3f3;
+}
+
+body.dark .book-actions {
+  background: #1f1f1f;
+  border-top: 1px solid #333;
+}
+
+body.dark .recent-book-item {
+  background: #242424 !important;
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+}
+
+body.dark .recent-book-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .recent-book-item .book-details {
+  background: #242424 !important;
+}
+
+body.dark .recent-book-item h4 {
+  color: #f5f5f5 !important;
+}
+
+body.dark .recent-book-item p {
+  color: #bdbdbd !important;
+}
+
+body.dark .recent-book-item .like-count {
+  color: #e2c36f !important;
+}
+
+body.dark .popular-book-card span,
+body.dark .like-count {
+  background: #3a3428 !important;
+  color: #d8c9a3 !important;
+  border: 1px solid #4b4333 !important;
+  box-shadow: none !important;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+body.dark .book-rating-summary {
+  background: #333333 !important;
+  color: #eeeeee !important;
+  border: 1px solid #555555 !important;
+  box-shadow: none !important;
+}
+
+body.dark .book-rating-summary span,
+body.dark .book-rating-summary small {
+  color: #eeeeee !important;
+}
+
+/* =========================
+   상세 페이지
+========================= */
+
+body.dark .view-mode .description {
+  background: #eeeeee10 !important;
+  color: #fffdfd !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark .detail-container h1,
+body.dark .book-title {
+  color: #ffffff !important;
+}
+
+body.dark .average-rating-box {
+  background: #2f2f2f !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+  box-shadow: none !important;
+}
+
+body.dark .average-rating-box strong,
+body.dark .average-rating-box span,
+body.dark .average-rating-box em {
+  color: #f1f1f1 !important;
+}
+
+body.dark .rating-stars {
+  color: #d6b85a !important;
+}
+
+body.dark .likes {
+  background: #2f2f2f !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+  box-shadow: none !important;
+}
+
+body.dark .likes * {
+  color: #f1f1f1 !important;
+}
+
+body.dark .author {
+  background: #4a4d57 !important;
+  color: #e8e8e8 !important;
+  border: 1px solid #5f6470 !important;
+  box-shadow: none !important;
+}
+
+body.dark .detail-genre-badge {
+  background: #5a4d3f !important;
+  color: #f1ede6 !important;
+  border: 1px solid #72614f !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   리뷰 섹션
+========================= */
+
+body.dark .review-section {
+  background: #1f1f1f !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark .review-section h2 {
+  color: #ffffff !important;
+}
+
+body.dark .review-section input,
+body.dark .review-section textarea,
+body.dark .review-section select {
+  background: #2b2b2b !important;
+  color: #f3f3f3 !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark .review-section input::placeholder,
+body.dark .review-section textarea::placeholder {
+  color: #9a9a9a !important;
+}
+
+body.dark .rating-select {
+  background: #2b2b2b !important;
+  color: #f3f3f3 !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark .empty-review {
+  background: #242424 !important;
+  color: #bdbdbd !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+body.dark .review-rating {
+  color: #d6b85a !important;
+}
+
+body.dark .review-rating span {
+  color: #d8c9a3 !important;
+}
+
+/* =========================
+   버튼
+========================= */
+
+body.dark .edit-btn {
+  background: #535352 !important;
+  color: #e5e5e5 !important;
+  border: 1px solid #555 !important;
+  box-shadow: none !important;
+}
+
+body.dark .edit-btn:hover {
+  background: #4a4a4a !important;
+}
+
+body.dark .delete-btn {
+  background: #4b3737 !important;
+  color: #ffffff !important;
+  border: 1px solid #5a4545 !important;
+  box-shadow: none !important;
+}
+
+body.dark .delete-btn:hover {
+  background: #5a4040 !important;
+}
+
+body.dark .back-btn {
+  background: #2f2f2f !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+  box-shadow: none !important;
+}
+
+body.dark .back-btn:hover {
+  background: #3a3a3a !important;
+  border-color: #555 !important;
+}
+
+body.dark .generate-btn,
+body.dark .ai-generate-btn {
+  background: #6a5940 !important;
+  color: #f3ede4 !important;
+  border: 1px solid #827055 !important;
+  box-shadow: none !important;
+}
+
+body.dark .add-btn,
+body.dark .book-submit-btn,
+body.dark .submit-button,
+body.dark .add-submit-btn {
+  background: #4f675d !important;
+  color: #eef3f0 !important;
+  border: 1px solid #627a70 !important;
+  box-shadow: none !important;
+}
+
+body.dark .add-btn:hover {
+  background: #5b7569 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+body.dark .like-btn,
+body.dark .favorite-btn {
+  background: #3a3428 !important;
+  color: #d8c9a3 !important;
+  border: 1px solid #4b4333 !important;
+  box-shadow: none !important;
+}
+
+body.dark .favorite-btn.active {
+  background: #6a5940 !important;
+  color: #ffffff !important;
+  border: 1px solid #827055 !important;
+}
+
+body.dark .review-edit-btn,
+body.dark .review-save-btn {
+  background: #355443 !important;
+  color: #ffffff !important;
+  border: 1px solid #4f7a63 !important;
+}
+
+body.dark .review-delete-btn {
+  background: #4b3737 !important;
+  color: #ffffff !important;
+  border: 1px solid #5a4545 !important;
+}
+
+body.dark .review-cancel-btn,
+body.dark .cancel-btn {
+  background: #2f2f2f !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+}
+
+/* =========================
+   휴지통 버튼 / 영역
+========================= */
+
+body.dark .trash-actions {
+  background: #1f1f1f !important;
+  border-top: 1px solid #333 !important;
+}
+
+body.dark .restore-btn {
+  background: #355443 !important;
+  color: #ffffff !important;
+  border: 1px solid #4f7a63 !important;
+  box-shadow: none !important;
+}
+
+body.dark .permanent-delete-btn {
+  background: #4b3737 !important;
+  color: #ffffff !important;
+  border: 1px solid #5a4545 !important;
+  box-shadow: none !important;
+}
+
+body.dark .back-list-link {
+  background: #2f2f2f !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   로딩 스피너
+========================= */
+
+body.dark .spinner {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top: 2px solid #ffffff;
+}
+
+/* =========================
+   스크롤바
+========================= */
+
+body.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 999px;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+/* =========================
+   다크모드 페이지 헤더 가독성 보정
+========================= */
+
+body.dark .page-header h1,
+body.dark .book-list-page .page-header h1,
+body.dark .add-book-page .page-header h1,
+body.dark .trash-page .page-header h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .page-header p,
+body.dark .book-list-page .page-header p,
+body.dark .add-book-page .page-header p,
+body.dark .trash-page .page-header p {
+  color: #e5e5e5 !important;
+}
+
+body.dark .page-header::before,
+body.dark .book-list-page .page-header::before,
+body.dark .add-book-page .page-header::before,
+body.dark .trash-page .page-header::before {
+  color: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.dark .page-header {
+  background: #1f1f1f !important;
+}
+/* 다크모드 input / textarea / select 글자 안 보임 보정 */
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+body.dark input:focus,
+body.dark textarea:focus,
+body.dark select:focus {
+  background-color: #2f2f2f !important;
+  color: #ffffff !important;
+  border-color: #7fc7a6 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(127, 199, 166, 0.18);
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #b5b5b5 !important;
+}
+
+/* select 옵션창 글자 보정 */
+body.dark select option {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+/* 다크모드 input / textarea / select 글자 안 보임 보정 */
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+body.dark input:focus,
+body.dark textarea:focus,
+body.dark select:focus {
+  background-color: #2f2f2f !important;
+  color: #ffffff !important;
+  border-color: #7fc7a6 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(127, 199, 166, 0.18);
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #b5b5b5 !important;
+}
+
+/* select 옵션창 글자 보정 */
+body.dark select option {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+body.dark .poster-choice-card {
+  background: #242424 !important;
+  border-color: #3a3a3a !important;
+  color: #f3f3f3 !important;
+}
+
+body.dark .poster-choice-card:hover {
+  border-color: #5f9f88 !important;
+  background: #2d2d2d !important;
+}
+
+body.dark .poster-choice-card.selected {
+  border-color: #5f9f88 !important;
+  background: #26352f !important;
+  box-shadow: 0 0 0 4px rgba(95, 159, 136, 0.18) !important;
+}
+
+body.dark .poster-choice-card span {
+  color: #f3f3f3 !important;
+}
+/* =========================
+   다크모드 도서 카드 글자 보정
+========================= */
+
+body.dark .book-list .book-info h3 {
+  color: #ffffff !important;
+}
+
+body.dark .book-list .book-info .author {
+  color: #d7f3e8 !important;
+}
+
+body.dark .book-list .book-info .description {
+  color: #cfcfcf !important;
+}
+
+body.dark .book-list .book-info .date {
+  color: #bdbdbd !important;
+}
+
+body.dark .book-list .genre-badge {
+  background: #2f2f2f !important;
+  color: #f3f3f3 !important;
+  border: 1px solid #555 !important;
+}
+
+body.dark .book-list .book-rating-summary {
+  background: #2f2f2f !important;
+  border: 1px solid #555 !important;
+  color: #f3f3f3 !important;
+}
+
+body.dark .book-list .book-rating-summary span,
+body.dark .book-list .book-rating-summary small {
+  color: #f3f3f3 !important;
+}
+body.dark .poster-choice-list {
+  background: #1f1f1f !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark .poster-choice-card {
+  background: #242424 !important;
+  border-color: #3a3a3a !important;
+  color: #f3f3f3 !important;
+}
+
+body.dark .poster-choice-card:hover {
+  border-color: #5f9f88 !important;
+  background: #2d2d2d !important;
+}
+
+body.dark .poster-choice-card.selected {
+  border-color: #5f9f88 !important;
+  background: #26352f !important;
+  box-shadow: 0 0 0 3px rgba(95, 159, 136, 0.18) !important;
+}
+
+body.dark .poster-choice-card span {
+  color: #f3f3f3 !important;
+}
+body.dark .poster-choice-list {
+  background: #1f1f1f !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark .poster-choice-card {
+  background: #242424 !important;
+  border-color: #3a3a3a !important;
+  color: #f3f3f3 !important;
+}
+
+body.dark .poster-choice-card:hover {
+  border-color: #5f9f88 !important;
+  background: #2d2d2d !important;
+}
+
+body.dark .poster-choice-card.selected {
+  border-color: #5f9f88 !important;
+  background: #26352f !important;
+  box-shadow: 0 0 0 3px rgba(95, 159, 136, 0.18) !important;
+}
+
+body.dark .poster-choice-card span {
+  color: #f3f3f3 !important;
+}
+body.dark .stats-section {
+  background: #1f1f1f !important;
+  border-color: #333 !important;
+}
+
+body.dark .stat-item {
+  background: #252525 !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+body.dark .stat-number {
+  color: #9bd8c0 !important;
+}
+
+body.dark .stat-label {
+  color: #cfcfcf !important;
+}

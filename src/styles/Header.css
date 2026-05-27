@@ -1,0 +1,124 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #edf1ea;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(120, 140, 130, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  color: #5f9f88;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-link {
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #eef5f2;
+  color: #5f9f88;
+}
+
+.nav-link.active {
+  background: #7db8a2;
+  color: white;
+  box-shadow: 0 8px 18px rgba(125, 184, 162, 0.25);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+}
+.dark-toggle-btn {
+  border: none;
+  background: #f3eadb;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.dark-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+body.dark .header {
+  background: rgba(25, 25, 25, 0.92);
+  border-bottom: 1px solid #333;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .logo {
+  color: #9bd8c0;
+}
+
+body.dark .nav-link {
+  color: #dddddd;
+}
+
+body.dark .nav-link:hover {
+  background: #26352f;
+  color: #9bd8c0;
+}
+
+body.dark .nav-link.active {
+  background: #5f9f88;
+  color: white;
+}
+
+body.dark .dark-toggle-btn {
+  background: #2a2a2a;
+  color: white;
+}
