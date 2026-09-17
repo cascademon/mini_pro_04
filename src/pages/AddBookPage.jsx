@@ -11,7 +11,6 @@ function AddBookPage() {
   const handleAddBook = async (newBook) => {
     try {
       const saved = await addBook(newBook);
-      console.log('저장됨:', saved);
 
       setSuccessMessage('✅ 도서가 성공적으로 등록되었습니다!');
 
@@ -19,8 +18,7 @@ function AddBookPage() {
         navigate('/books');
       }, 1500);
     } catch (err) {
-      console.error('도서 등록 실패:', err);
-      alert('도서 등록 중 오류가 발생했습니다.');
+      throw err;
     }
   };
 

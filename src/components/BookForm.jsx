@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import '../styles/BookForm.css';
 
 const DEFAULT_POSTER = "/default-book-cover.png";
@@ -13,8 +13,11 @@ function BookForm({ onAddBook }) {
   const [candidatePosters, setCandidatePosters] = useState([]);
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('openaiApiKey') || '');
   const [generatingPoster, setGeneratingPoster] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const savingRef = useRef(false);
 
-  const handleClick = () => {
+  const handleClick = async () => {
+    if (savingRef.current) return;
     if (!title.trim()) {
       alert('제목을 입력하세요');
       return;
@@ -37,15 +40,23 @@ function BookForm({ onAddBook }) {
       isFavorite: false,
     };
 
-    onAddBook(newBook);
-
-    setTitle('');
-    setAuthor('');
-    setDescription('');
-    setReleaseDate('');
-    setGenre('소설');
-    setPoster(DEFAULT_POSTER);
-    setCandidatePosters([]);
+    savingRef.current = true;
+    setSaving(true);
+    try {
+      await onAddBook(newBook);
+      setTitle('');
+      setAuthor('');
+      setDescription('');
+      setReleaseDate('');
+      setGenre('소설');
+      setPoster(DEFAULT_POSTER);
+      setCandidatePosters([]);
+    } catch {
+      alert('도서 등록에 실패했습니다. 입력 내용은 유지됩니다.');
+    } finally {
+      savingRef.current = false;
+      setSaving(false);
+    }
   };
 
   const handleApiKeyChange = (value) => {
@@ -271,7 +282,7 @@ function BookForm({ onAddBook }) {
         </div>
       </div>
 
-      <button onClick={handleClick} className="add-btn">
+      <button onClick={handleClick} className="add-btn" disabled={saving}>
         도서 추가
       </button>
     </div>
